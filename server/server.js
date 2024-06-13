@@ -16,6 +16,11 @@ app.get("/", (req, res) => {
     res.render("index", { prevMessages });
 })
 
+//リダイレクト
+app.get("/redirect", (req, res) => {
+    res.redirect("/");
+})
+
 app.post("/", (req, res) => {
     
     //過去の書き込みの更新
