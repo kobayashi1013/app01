@@ -20,7 +20,8 @@ public class WebSecurityConfig {
                 authorize -> authorize.requestMatchers(Url.NO_AUTHENTICATION).permitAll()
                     .anyRequest().authenticated())
             .formLogin(
-                login -> login.loginPage(Url.SIGNIN_URL));
+                login -> login.loginPage(Url.SIGNIN_URL)
+                    .defaultSuccessUrl(Url.PRIVATE_URL));
         
         return http.build();
     }

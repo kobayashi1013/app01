@@ -1,0 +1,24 @@
+/* Component */
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Container */
+.container-signform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* Block */
+.block-signform {
+    background: rgb(190, 219, 247);
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+}

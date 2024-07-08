@@ -5,6 +5,20 @@
         <title>signin</title>
     </head>
     <body>
-        signin
+        <div th:insert="~{common/sourceList::sourceList}"></div>
+        <div class="fullscreen" style="background: linear-gradient(-135deg, #f1c49a, #861591);">
+            <div class="container-signform">
+                <b style="font-size: 40px;">Test</b><p></p>
+                <div class="form-group block-signform">
+                    <form th:action="@{/signin}" method="post" th:object="${signinForm}">
+                        <div class="d-grid col-8 mx-auto">
+                            <input type="text" class="form-control" th:field="*{username}" placeholder="username"><p></p>
+                            <input type="password" class="form-control" th:field="*{password}" placeholder="password"><p></p>
+                            <button type="submit" class="btn btn-primary">サインイン</button><p></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
