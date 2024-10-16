@@ -2,19 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-        <title>signin</title>
+        <title th:text="${applicationName + ' サインイン'}"></title>
     </head>
     <body>
         <div th:insert="~{common/sourceList::sourceList}"></div>
         <div class="fullscreen" style="background: linear-gradient(-135deg, #f1c49a, #861591);">
             <div class="container-signform">
-                <b style="font-size: 40px;">Test</b><p></p>
+                <b style="font-size: 40px;" th:text="${applicationName}"></b><p></p>
                 <div class="form-group block-signform">
                     <form th:action="@{/signin}" method="post" th:object="${signinForm}">
                         <div class="d-grid col-8 mx-auto">
                             <input type="text" class="form-control" th:field="*{username}" placeholder="username"><p></p>
                             <input type="password" class="form-control" th:field="*{password}" placeholder="password"><p></p>
-                            <button type="submit" class="btn btn-primary">サインイン</button><p></p>
+                            <button type="submit" class="btn btn-primary">サインイン</button>
                         </div>
                     </form>
                 </div>
